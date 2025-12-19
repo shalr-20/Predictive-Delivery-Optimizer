@@ -81,3 +81,9 @@ streamlit run app.py
 
 ## 🏗️ Architecture
 <img width="676" height="131" alt="Image" src="https://github.com/user-attachments/assets/71c2449c-ee80-4e48-a37c-67441b1bbc1d" />
+
+## 📞 Support
+For support, please contact:
+
+Email: shalini20roy@gmail.com
+Name: Shalini Roy
