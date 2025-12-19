@@ -648,8 +648,15 @@ else:  # Settings & Export
     # Data export
     st.markdown("### 📥 Export Data")
     
-    export_format = st.selectbox("Select Export Format", ["CSV", "JSON"])
-    
+    # Add to your export section
+    export_format = st.selectbox("Select Export Format", ["CSV", "JSON", "Excel (.xlsx)"])
+    if export_format == "Excel (.xlsx)":
+        # This requires the 'openpyxl' engine
+        buffer = io.BytesIO()
+        with pd.ExcelWriter(buffer, engine='openpyxl') as writer:
+            merged_data.to_excel(writer, sheet_name='Master_Data', index=False)
+        st.download_button(label="Download Excel", data=buffer, file_name="logistics_export.xlsx", mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+        
     if st.button("Generate Export File"):
         if export_format == "CSV":
             csv = merged_data.to_csv(index=False)
