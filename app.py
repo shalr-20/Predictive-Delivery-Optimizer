@@ -45,6 +45,7 @@ st.markdown("""
     }
     .success-card {
         background-color: #D1FAE5;
+        color: #000000
         padding: 1rem;
         border-radius: 10px;
         border-left: 5px solid #10B981;
