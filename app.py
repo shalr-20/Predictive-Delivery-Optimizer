@@ -37,6 +37,7 @@ st.markdown("""
     }
     .warning-card {
         background-color: #FEF3C7;
+        color: #000000;
         padding: 1rem;
         border-radius: 10px;
         border-left: 5px solid #F59E0B;
